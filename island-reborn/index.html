@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Island Reborn: The Ecoresort Challenge</title>
+<meta name="description" content="A team-based sustainability game. Rebuild a degraded island as an ecoresort and watch your decisions bring it to life.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand"><span id="gameTitle">Island Reborn</span><small id="gameSub">The Ecoresort Challenge</small></div>
+  <span class="chip" id="chipResort" hidden></span>
+  <span class="grow"></span>
+  <span class="chip">Year <b id="chipYear">2030</b></span>
+  <span class="chip">Knowledge points <b id="chipKP">0</b></span>
+  <button class="btn ghost small" id="btnMenu" aria-haspopup="dialog">Menu</button>
+</header>
+<nav id="quest" aria-label="Quest progress"></nav>
+<main id="game">
+  <section id="stage" aria-label="The island">
+    <div class="scene-wrap">
+      <canvas id="scene" role="img" aria-label="Animated view of the island and your ecoresort"></canvas>
+      <div class="scene-hud" id="hud"></div>
+      <button class="prompt" id="prompt" hidden></button>
+      <div class="dlg" id="dlg" hidden></div>
+      <div class="dpad" id="dpad" aria-label="Move on screen">
+        <button data-d="up" aria-label="Up">▲</button><button data-d="left" aria-label="Left">◀</button><button data-d="down" aria-label="Down">▼</button><button data-d="right" aria-label="Right">▶</button>
+      </div>
+      <div class="scene-tools">
+        <button id="btnNight" aria-pressed="false" title="Toggle night view">🌙</button>
+        <button id="btnShot" title="Save a picture of your island">📷</button>
+      </div>
+    </div>
+    <div class="board" id="board"></div>
+    <div class="tabs">
+      <div class="tabbar" role="tablist" id="tabbar">
+        <button role="tab" aria-selected="true" data-tab="vitals">Vitals</button>
+        <button role="tab" aria-selected="false" data-tab="quests">Quests</button>
+        <button role="tab" aria-selected="false" data-tab="venn">Venn</button>
+        <button role="tab" aria-selected="false" data-tab="foot">Footprint</button>
+        <button role="tab" aria-selected="false" data-tab="log">Journal</button>
+      </div>
+      <div class="tabpane" id="tabpane"></div>
+    </div>
+  </section>
+  <section id="panel" aria-live="polite"></section>
+</main>
+<div id="modal" role="dialog" aria-modal="true"><div class="box" id="modalBox"></div></div>
+
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/avatars.js"></script>
+<script src="js/model.js"></script>
+<script src="js/npcs.js"></script>
+<script src="js/sim.js"></script>
+<script src="js/scene-facilities.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/export.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
